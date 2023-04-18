@@ -1,9 +1,81 @@
+// Scroll-load component
+let pagination = 10
+let output = ''
+let list = document.querySelector('[data-cards-list]')
+let http = new XMLHttpRequest()
+
+class ScrollLoad {
+  static attach() {
+    const scroll = new ScrollLoad()
+    scroll.init()
+  }
+
+  init() {
+    this.applyListener()
+    this.drawCards()
+  }
+
+  applyListener() {
+    window.addEventListener('scroll', () => {
+      const documentRect = document.documentElement.getBoundingClientRect()
+
+      if (documentRect.bottom < document.documentElement.clientHeight + 1) {
+        this.scrollPagination()
+        this.drawCards()
+      }
+    })
+  }
+
+  scrollPagination() {
+    return pagination = pagination + 10
+  }
+
+  drawCards() {
+    let url = 'https://picsum.photos/v2/list?page=1&limit=' + pagination
+
+    http.open('get', url, true)
+
+    http.send()
+
+    http.onload = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        let products = JSON.parse(this.responseText)
+
+        for (let item of products) {
+          output += `
+            <div id="${item.id}" class="col col-12 col-md-6 col-lg-12 col-xl-6 product-card" data-card="card">
+              <div class="card h-100">
+                <img class="card-img-top" src="${item.download_url}" alt="...">
+                <div class="card-body text-collapse" data-collapse>
+                  <h4 class="card-title fw-bold">${item.author}</h4>
+                  <p class="card-text text-collapse-text mb-2" data-collapse-text>
+                      Here goes some sample, example text that is relatively short.
+                      Here goes some sample, example text that
+                      Here goes some sample, example text that
+                  </p>
+                  <a class="link-dark text-decoration-none text-collapse-button fw-medium d-flex mb-1 show" data-collapse-action data-collapse-open href="javascript:void(0);">
+                      Show more...
+                  </a>
+                </div>
+                <div class="card-footer d-flex gap-3">
+                    <button type="button" class="btn btn-warning">Save to collection</button>
+                    <button type="button" class="btn btn-outline-secondary">Share</button>
+                </div>
+              </div>
+            </div>
+          `
+        }
+
+        list.innerHTML = output
+      }
+    }
+  }
+}
+
+ScrollLoad.attach()
+
 // Collapse component
-const COLLAPSE        = '[data-collapse]'
-const COLLAPSE_ACTION = '[data-collapse-action]'
-const COLLAPSE_TEXT   = '[data-collapse-text]'
-const OPEN_COLLAPSE   = 'collapseOpen'
-const COLLAPSES       = document.querySelectorAll(COLLAPSE)
+const COLLAPSE_ACTION = 'collapseAction'
 
 class Collapse {
   static attach() {
@@ -13,15 +85,6 @@ class Collapse {
 
   init() {
     this.applyListener()
-
-    for (let item of COLLAPSES) {
-      const itemAction = item.querySelector(COLLAPSE_ACTION)
-      const itemText = item.querySelector(COLLAPSE_TEXT)
-
-      if (itemText.scrollHeight >= '49') {
-        itemAction.classList.add('show')
-      }
-    }
   }
 
   applyListener() {
@@ -29,35 +92,33 @@ class Collapse {
       const element = e.target
 
       if (this.isCallCollapseElement(element)) {
-        const text = element.previousElementSibling
-
-        if (this.isOpened(text)) {
-          this.closeCollapse(text, element)
+        if (this.isOpened(element)) {
+          this.closeCollapse(element)
         } else {
-          this.openCollapse(text, element)
+          this.openCollapse(element)
         }
       }
     })
   }
 
   isCallCollapseElement(element) {
-    return element && OPEN_COLLAPSE in element.dataset
+    return element && COLLAPSE_ACTION in element.dataset
   }
 
-  openCollapse(text, element) {
-    text.classList.add('collapsed')
-    text.style.maxHeight = text.scrollHeight + 'px'
+  openCollapse(element) {
+    element.previousElementSibling.classList.add('collapsed')
+    element.previousElementSibling.style.maxHeight = element.previousElementSibling.scrollHeight + 'px'
     element.innerHTML = 'Collapse'
   }
 
-  closeCollapse(text, element) {
-    text.classList.remove('collapsed')
-    text.style.maxHeight = '3rem'
+  closeCollapse(element) {
+    element.previousElementSibling.classList.remove('collapsed')
+    element.previousElementSibling.style.maxHeight = '3rem'
     element.innerHTML = 'Show more...'
   }
 
-  isOpened(text) {
-    return text.classList.contains('collapsed')
+  isOpened(element) {
+    return element.previousElementSibling.classList.contains('collapsed')
   }
 }
 

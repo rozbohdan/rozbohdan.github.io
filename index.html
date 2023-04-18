@@ -9,70 +9,70 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light border-bottom mb-3 mb-lg-5 py-3 py-lg-0">
-            <div class="container container-fluid">
-                <button class="navbar-toggler d-flex d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <svg class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <use xlink:href="./icons.svg#burger" />
-                    </svg>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll gap-lg-4">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Photos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Videos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Podcasts</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center w-100 text-nowrap flex-wrap flex-md-nowrap gap-3 gap-md-5">
-                        <div class="input-group search">
-                            <svg class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <use xlink:href="./icons.svg#search" />
-                            </svg>
-                            <input type="search" class="form-control" placeholder="Search for anything...">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light border-bottom mb-3 mb-lg-5 py-3 py-lg-0">
+        <div class="container container-fluid">
+            <button class="navbar-toggler d-flex d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use xlink:href="./icons.svg#burger" />
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Podcasts</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center w-100 text-nowrap flex-wrap flex-md-nowrap gap-3 gap-md-5">
+                    <div class="input-group search">
+                        <svg class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <use xlink:href="./icons.svg#search" />
+                        </svg>
+                        <input type="search" class="form-control" placeholder="Search for anything...">
+                    </div>
+                    <div class="d-flex align-items-center gap-4">
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle link-secondary fw-normal" data-bs-toggle="dropdown" aria-expanded="false">
+                                English
+                                <svg xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <use xlink:href="./icons.svg#chevron-down" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">English</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Spanish</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Ukrainian</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="d-flex align-items-center gap-4">
-                            <div class="btn-group">
-                                <button type="button" class="btn dropdown-toggle link-secondary fw-normal" data-bs-toggle="dropdown" aria-expanded="false">
-                                    English
-                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <use xlink:href="./icons.svg#chevron-down" />
-                                    </svg>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="#">English</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">Spanish</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">Ukrainian</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a class="link-secondary text-decoration-none" href="/">
-                                Sign in
-                            </a>
-                        </div>
+                        <a class="link-secondary text-decoration-none" href="/">
+                            Sign in
+                        </a>
                     </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
     <section class="mb-5">
         <div class="container">
             <div class="d-flex align-items-start flex-column flex-lg-row">
                 <aside class="w-100 py-3">
                     <nav
-                        class="nav flex-column nav-pills"
-                        id="v-pills-tab"
-                        role="tablist"
-                        aria-orientation="vertical"
+                            class="nav flex-column nav-pills"
+                            id="v-pills-tab"
+                            role="tablist"
+                            aria-orientation="vertical"
                     >
                         <a
                                 class="nav-link d-flex active"
@@ -145,127 +145,14 @@
                     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                         <div class="d-flex flex-wrap gap-2 gap-sm-3 justify-content-between align-items-center mb-1">
                             <h1 class="mb-0 fw-bold">All photos</h1>
-                            <div class="btn-group" role="group" aria-label="Basic example">
+                            <div class="btn-group tabs" role="group" aria-label="Basic example">
                                 <button type="button" class="btn btn-dark">Newest</button>
                                 <button type="button" class="btn btn-outline-secondary">Latest</button>
                             </div>
                         </div>
                         <h6 class="fw-bold text-secondary mb-4">150 items</h6>
                         <div class="d-flex flex-column gap-4">
-                            <div class="row gap-4 gap-md-0 gap-lg-4 gap-xl-0">
-                                <div class="col col-12 col-md-6 col-lg-12 col-xl-6">
-                                    <div class="card h-100">
-                                        <img class="card-img-top" src="./thumbnail.png" alt="...">
-                                        <div class="card-body text-collapse" data-collapse>
-                                            <h4 class="card-title fw-bold">Heading</h4>
-                                            <p class="card-text text-collapse-text mb-2" data-collapse-text>
-                                                Here goes some sample, example text that is relatively short.
-                                            </p>
-                                            <a class="link-dark text-decoration-none text-collapse-button fw-medium d-flex mb-1" data-collapse-action data-collapse-open href="javascript:void(0);">
-                                                Show more...
-                                            </a>
-                                        </div>
-                                        <div class="card-footer d-flex flex-wrap gap-3">
-                                            <button type="button" class="btn btn-warning">Save to collection</button>
-                                            <button type="button" class="btn btn-outline-secondary">Share</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-12 col-md-6 col-lg-12 col-xl-6">
-                                    <div class="card h-100">
-                                        <img class="card-img-top" src="./thumbnail.png" alt="...">
-                                        <div class="card-body text-collapse" data-collapse>
-                                            <h4 class="card-title fw-bold">Heading</h4>
-                                            <p class="card-text text-collapse-text mb-2" data-collapse-text>
-                                                And here full text doesn’t fit, and at the very end of it we should show a truncation. And here full text doesn’t fit, and at the very end of it we should show a truncation.
-                                            </p>
-                                            <a class="link-dark text-decoration-none text-collapse-button fw-medium d-flex mb-1" data-collapse-action data-collapse-open href="javascript:void(0);">
-                                                Show more...
-                                            </a>
-                                        </div>
-                                        <div class="card-footer d-flex flex-wrap gap-3">
-                                            <button type="button" class="btn btn-warning">Save to collection</button>
-                                            <button type="button" class="btn btn-outline-secondary">Share</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row gap-4 gap-md-0 gap-lg-4 gap-xl-0">
-                                <div class="col col-12 col-md-6 col-lg-12 col-xl-6">
-                                    <div class="card h-100">
-                                        <img class="card-img-top" src="./thumbnail.png" alt="...">
-                                        <div class="card-body text-collapse" data-collapse>
-                                            <h4 class="card-title fw-bold">Heading</h4>
-                                            <p class="card-text text-collapse-text mb-2" data-collapse-text>
-                                                And here full text doesn’t fit, and at the very end of it we should show a truncation. And here full text doesn’t fit, and at the very end of it we should show a truncation.
-                                            </p>
-                                            <a class="link-dark text-decoration-none text-collapse-button fw-medium d-flex mb-1" data-collapse-action data-collapse-open href="javascript:void(0);">
-                                                Show more...
-                                            </a>
-                                        </div>
-                                        <div class="card-footer d-flex flex-wrap gap-3">
-                                            <button type="button" class="btn btn-warning">Save to collection</button>
-                                            <button type="button" class="btn btn-outline-secondary">Share</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-12 col-md-6 col-lg-12 col-xl-6">
-                                    <div class="card h-100">
-                                        <img class="card-img-top" src="./thumbnail.png" alt="...">
-                                        <div class="card-body text-collapse" data-collapse>
-                                            <h4 class="card-title fw-bold">Heading</h4>
-                                            <p class="card-text text-collapse-text mb-2" data-collapse-text>
-                                                Here goes some sample, example text that is relatively short.
-                                            </p>
-                                            <a class="link-dark text-decoration-none text-collapse-button fw-medium d-flex mb-1" data-collapse-action data-collapse-open href="javascript:void(0);">
-                                                Show more...
-                                            </a>
-                                        </div>
-                                        <div class="card-footer d-flex flex-wrap gap-3">
-                                            <button type="button" class="btn btn-warning">Save to collection</button>
-                                            <button type="button" class="btn btn-outline-secondary">Share</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row gap-4 gap-md-0 gap-lg-4 gap-xl-0">
-                                <div class="col col-12 col-md-6 col-lg-12 col-xl-6">
-                                    <div class="card h-100">
-                                        <img class="card-img-top" src="./thumbnail.png" alt="...">
-                                        <div class="card-body text-collapse" data-collapse>
-                                            <h4 class="card-title fw-bold">Heading</h4>
-                                            <p class="card-text text-collapse-text mb-2" data-collapse-text>
-                                                Here goes some sample, example text that is relatively short.
-                                            </p>
-                                            <a class="link-dark text-decoration-none text-collapse-button fw-medium d-flex mb-1" data-collapse-action data-collapse-open href="javascript:void(0);">
-                                                Show more...
-                                            </a>
-                                        </div>
-                                        <div class="card-footer d-flex flex-wrap gap-3">
-                                            <button type="button" class="btn btn-warning">Save to collection</button>
-                                            <button type="button" class="btn btn-outline-secondary">Share</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-12 col-md-6 col-lg-12 col-xl-6">
-                                    <div class="card h-100">
-                                        <img class="card-img-top" src="./thumbnail.png" alt="...">
-                                        <div class="card-body text-collapse" data-collapse>
-                                            <h4 class="card-title fw-bold">Heading</h4>
-                                            <p class="card-text text-collapse-text mb-2" data-collapse-text>
-                                                And here full text doesn’t fit, and at the very end of it we should show a truncation. And here full text doesn’t fit, and at the very end of it we should show a truncation.
-                                            </p>
-                                            <a class="link-dark text-decoration-none text-collapse-button fw-medium d-flex mb-1" data-collapse-action data-collapse-open href="javascript:void(0);">
-                                                Show more...
-                                            </a>
-                                        </div>
-                                        <div class="card-footer d-flex flex-wrap gap-3">
-                                            <button type="button" class="btn btn-warning">Save to collection</button>
-                                            <button type="button" class="btn btn-outline-secondary">Share</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="row gap-4 gap-md-0 gap-lg-4 gap-xl-0 row-gap-4" data-cards-list></div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
@@ -281,6 +168,7 @@
             </div>
         </div>
     </section>
-    <script src="./main.js"></script>
+
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
